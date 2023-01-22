@@ -1,0 +1,20 @@
+@font-face {
+    src: url('../fonts/mini_pixel-7.ttf');
+}
+
+
+.menuBoton{
+	/*-fx-background-image: url("../images/menu/MenuBotonMonkeyBros.png");
+	-fx-background-size: 200px 80px;*/
+	-fx-font-family: "Mini Pixel-7"; /* Abrir archivo .ttf para saber el nombre */
+	-fx-font-size: 38.0px;
+	-fx-text-fill: yellow;
+	-fx-border-color: white;
+    -fx-border-width: 3;
+    -fx-border-insets: 6;
+}
+
+.menuBoton:hover{
+	-fx-border-color: yellow;
+	-fx-text-fill: white;
+}
