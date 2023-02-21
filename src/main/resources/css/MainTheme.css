@@ -46,6 +46,24 @@
 	-fx-font-size: 30.0px;
 }
 
+.list-cell{
+	-fx-font-family: "Mini Pixel-7";
+	-fx-font-size: 40.0px;
+	-fx-background-color: transparent;
+	-fx-alignment: center;
+	-fx-text-fill: yellow;
+}
+
+.list-cell:selected{
+	-fx-text-fill: white;
+}
+
+.lista{
+	-fx-background-color: transparent;
+}
+
+
+
 .boton_opciones{
     -fx-border-color: transparent;
     -fx-border-width: 0.0;

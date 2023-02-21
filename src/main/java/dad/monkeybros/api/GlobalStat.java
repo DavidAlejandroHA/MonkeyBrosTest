@@ -15,6 +15,7 @@ public class GlobalStat {
 	GlobalStats client;
 	Stats stats;
 
+	//https://github.com/fvarrui/globalstats-java-client
 	public GlobalStat() throws Exception {
 		client = new GlobalStats(clientId, clientSecret);
 		token = client.getAccessToken();
@@ -53,9 +54,9 @@ public class GlobalStat {
 	}
 	
 	
-	public void getLeaderBorad() throws Exception {
+	public void getLeaderBoard() throws Exception {
 		List<Rank> leader=  client.getLeaderboard("highscore", 10);
-		System.out.println(leader);
+		System.out.println(leader + "test");
 	}
 
 }

@@ -5,9 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
@@ -22,18 +20,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class RootMenuController implements Initializable {
 
-	// model
-
-//	private IntegerProperty loadedWidth = new SimpleIntegerProperty();
-//	private IntegerProperty loadedHeight = new SimpleIntegerProperty();
-
 	// view
+	
 	@FXML
 	private BorderPane view;
 
@@ -57,10 +49,14 @@ public class RootMenuController implements Initializable {
 
 	// controllers
 
-	private JugarMenuController jugarMenuController = new JugarMenuController();
+	private JugarMenuController jugarMenuController;
 
 	private OpcionesMenuController opcionesMenuController;
+	
+	private HighscoreMenuController highscoreMenuController;
 
+	// properties
+	
 	private Properties properties = new Properties();
 	// paths
 
@@ -165,6 +161,7 @@ public class RootMenuController implements Initializable {
 	// Cambiar al menu de jugar
 	@FXML
 	void onJugarClickAction(MouseEvent event) throws IOException {
+		jugarMenuController = new JugarMenuController();
 		jugarMenuController.setAnteriorView(view);
 		MonkeyBrosApp.scene.setRoot(jugarMenuController.getView());
 		// https://stackoverflow.com/questions/37106379/why-doesnt-my-scene-pop-up-when-changing-scenes-javafx
@@ -173,7 +170,9 @@ public class RootMenuController implements Initializable {
 	// Cambiar al menu de Highscore
 	@FXML
 	void onHighscoreClickAction(MouseEvent event) {
-		System.out.println(menuOpcionesBoton.getScene().getHeight());
+		highscoreMenuController = new HighscoreMenuController();
+		highscoreMenuController.setAnteriorView(view);
+		MonkeyBrosApp.scene.setRoot(highscoreMenuController.getView());
 	}
 
 	// Cambiar al menu de opciones

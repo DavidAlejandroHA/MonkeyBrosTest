@@ -17,7 +17,7 @@
   </rowConstraints>
    <children>
       <Label fx:id="tituloLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="286.0" styleClass="titulo_small" text="Resoluciones disponibles" textAlignment="CENTER" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
-      <ListView fx:id="resolucionesListView" prefHeight="300.0" styleClass="label" GridPane.rowIndex="1" />
+      <ListView fx:id="resolucionesListView" prefHeight="300.0" styleClass="lista" GridPane.rowIndex="1" />
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
