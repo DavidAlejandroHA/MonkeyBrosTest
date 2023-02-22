@@ -65,12 +65,12 @@ public class HighscoreMenuController implements Initializable {
 		//listaScores.add()
 		try {
 			globalStat = new GlobalStat();
-			//globalStat.getLeaderBoard();
+			globalStat.createUser();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			try {
-				globalStat.createUser();
+				//globalStat.createUser();
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

@@ -20,6 +20,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
 import javafx.stage.Stage;
 
 public class RootMenuController implements Initializable {
@@ -76,8 +77,10 @@ public class RootMenuController implements Initializable {
 //		//System.out.println(getClass().getResource("/audio/Bonus.mp3").toExternalForm());
 		//System.out.println(Paths.get("test.mp3").toUri().toString());
 //		//Media media = new Media(Paths.get("test.mp3").toUri().toString());
-//		Media media = new Media("test.mp3");
-//		System.out.println(media.getSource());
+		System.out.println(getClass().getResource("/audio/Bonus.mp3").toExternalForm());
+		Media media = new Media(getClass().getResource("/audio/Bonus.mp3").toExternalForm());
+		//		Media media = new Media("test.mp3");
+		System.out.println(media.getSource());
 		
 		//System.out.println(f.toURI());
 		//mediaplayer = new MediaPlayer(new Media(f.toURI().toString()));  
@@ -87,7 +90,7 @@ public class RootMenuController implements Initializable {
 
 		try {
 			properties.load(new FileInputStream(RootMenuController.rutaFull));
-			// System.out.println(java.awt.event.KeyEvent.getKeyText(' ')); // en mayus
+			// java.awt.event.KeyEvent.getKeyText(' '); // en mayus
 			Resolucion res = Resolucion.valueOf(properties.getProperty("resolucion"));
 			System.out.println(Resolucion.valueOf(properties.getProperty("resolucion")));
 
